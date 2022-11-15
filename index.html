@@ -41,11 +41,6 @@
     a:hover {
         text-shadow: 0 0 5px, 0 0 10px, 0 0 20px, 0 0 40px;
     }
-    @media (pointer: coarse) {
-        a {
-            transition: none;
-        }
-    }
     .athenian {
         color: #ff7427;
     }
@@ -112,8 +107,12 @@
         width: 100vw;
         left: calc(-25vw + 1px);
     }
-     section#blog > div {
+    section#blog > div {
         font-size: 1.153vw;
+    }
+    section#blog a {
+        /* the bold font breaks the blog layout */
+        font-weight: normal;
     }
     .post {
         white-space: pre;
@@ -143,7 +142,7 @@
         }
         h1 {
             font-size: 1.55vw;
-            line-height: 1.05em;
+            line-height: 1em;
         }
         section#perks > div {
             position: static;
@@ -159,6 +158,9 @@
         }
         section#blog > div {
             font-size: 2.21vw;
+        }
+        section#blog a {
+            transition: none;
         }
     }
 </style>
@@ -277,10 +279,10 @@ We host the code on <a href="https://github.com/athenianco">GitHub</a> and our C
     </div></p>
     <p>And others we did elsewhere:
     <div class="list">
-    <span class="bullet">*</span> <a href="https://github.com/cayleygraph/cayley">cayley</a> - database for Linked Data, ⭐14.4k.<br>
-    <span class="bullet">*</span> <a href="https://github.com/src-d/hercules">hercules</a> - fast, insightful and highly customizable Git history analysis, ⭐1.8k.<br>
-    <span class="bullet">*</span> <a href="https://github.com/src-d/kmcuda">kmcuda</a> - "Yinyang" K-means and K-nn using NVIDIA CUDA (ML), ⭐700.<br>
-    <span class="bullet">*</span> <a href="https://github.com/src-d/wmd-relax">wmd-relax</a> - Fast Word Mover's Distance (ML), ⭐450.<br>
+    <span class="bullet">*</span> <a href="https://github.com/cayleygraph/cayley">cayley</a> - database for Linked Data, <i class="fa-regular">⭐</i>14.4k.<br>
+    <span class="bullet">*</span> <a href="https://github.com/src-d/hercules">hercules</a> - fast, insightful and highly customizable Git history analysis, <i class="fa-regular">⭐</i>1.8k.<br>
+    <span class="bullet">*</span> <a href="https://github.com/src-d/kmcuda">kmcuda</a> - "Yinyang" K-means and K-nn using NVIDIA CUDA (ML), <i class="fa-regular">⭐</i>700.<br>
+    <span class="bullet">*</span> <a href="https://github.com/src-d/wmd-relax">wmd-relax</a> - Fast Word Mover's Distance (ML), <i class="fa-regular">⭐</i>450.<br>
     </div></p>
 </section>
 <section id="tools">
@@ -476,31 +478,31 @@ We host the code on <a href="https://github.com/athenianco">GitHub</a> and our C
 │<span class="heart perk-icon">        *        </span>                                     │
 └──────────────────────────────────────────────────────┘</div>
 <div class="perk">┌──────────────────────────────────────────────────────┐
-│<span class="_28 perk-icon">  .---. .-----. </span>                                      │
-│<span class="_28 perk-icon"> / .-  \| --- ; </span>37 days of paid vacation.             │
-│<span class="_28 perk-icon"> '-'_' |`-' / ' </span>                                      │
-│<span class="_28 perk-icon">   |_ <    / /  </span>It's you who decides when.            │
-│<span class="_28 perk-icon"> .-. | |  / /   </span>Unlimited sick days.                  │
-│<span class="_28 perk-icon"> \ `-  / / /    </span>                                      │
-│<span class="_28 perk-icon">  `--'´ '-'     </span>                                      │
+│<span class="_28 perk-icon">  .---. .-----.  </span>                                     │
+│<span class="_28 perk-icon"> / .-  \| --- ;  </span>37 days of paid vacation.            │
+│<span class="_28 perk-icon"> '-'_' |`-' / '  </span>                                     │
+│<span class="_28 perk-icon">   |_ <    / /   </span>It's you who decides when.           │
+│<span class="_28 perk-icon"> .-. | |  / /    </span>Unlimited sick days.                 │
+│<span class="_28 perk-icon"> \ `-  / / /     </span>                                     │
+│<span class="_28 perk-icon">  `--'´ '-'      </span>                                     │
 └──────────────────────────────────────────────────────┘</div>
     <div class="perk">┌──────────────────────────────────────────────────────┐
-│<span class="bolt perk-icon">       de       </span>                                      │
-│<span class="bolt perk-icon">      z$        </span>Compensation for burned electricity.  │
-│<span class="bolt perk-icon">     dP         </span>                                      │
-│<span class="bolt perk-icon">     ***$$P     </span>Energy prices are so high these days. │
-│<span class="bolt perk-icon">        zP      </span>                                      │
-│<span class="bolt perk-icon">       z"       </span>                                      │
-│<span class="bolt perk-icon">      /         </span>                                      │
+│<span class="bolt perk-icon">       de        </span>                                     │
+│<span class="bolt perk-icon">      z$         </span>Compensation for burned electricity. │
+│<span class="bolt perk-icon">     dP          </span>                                     │
+│<span class="bolt perk-icon">     ***$$P      </span>Energy prices are so high these days.│
+│<span class="bolt perk-icon">        zP       </span>                                     │
+│<span class="bolt perk-icon">       z"        </span>                                     │
+│<span class="bolt perk-icon">      /          </span>                                     │
 └──────────────────────────────────────────────────────┘</div>
 <div class="perk">┌──────────────────────────────────────────────────────┐
-│<span class="chair perk-icon">       ###       </span>                                     │
-│<span class="chair perk-icon">      ##=##      </span>Budget for office equipment.         │
-│<span class="chair perk-icon">   _  ##=##  _   </span>                                     │
-│<span class="chair perk-icon">    \   O   /    </span>We got you covered with a second     │
-│<span class="chair perk-icon">     #######     </span>monitor, physical mouse, etc.        │
-│<span class="chair perk-icon">      __|__      </span>                                     │
-│<span class="chair perk-icon">     o  o  o     </span>                                     │
+│<span class="chair perk-icon">      ###        </span>                                     │
+│<span class="chair perk-icon">     ##=##       </span>Budget for office equipment.         │
+│<span class="chair perk-icon">  _  ##=##  _    </span>                                     │
+│<span class="chair perk-icon">   \   O   /     </span>We got you covered with a second     │
+│<span class="chair perk-icon">    #######      </span>monitor, physical mouse, etc.        │
+│<span class="chair perk-icon">     __|__       </span>                                     │
+│<span class="chair perk-icon">    o  o  o      </span>                                     │
 └──────────────────────────────────────────────────────┘</div>
 <div class="perk">┌──────────────────────────────────────────────────────┐
 │<span class="bucks perk-icon">     _           </span>                                     │
